@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerColision : MonoBehaviour
 {
     // public PlayerScript playerScript;
+    public Animator playerAnimator;
     public Player playerScript;
     public Score score;
     public GameController gameController;
@@ -23,6 +24,7 @@ public class PlayerColision : MonoBehaviour
         {
             gameController.GameOver();
             playerScript.enabled = false;
+            playerAnimator.SetBool("isRuning", false);
         }
     }
     private void OnTriggerEnter(Collider other)

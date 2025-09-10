@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
             StartGame();
             score.SetActive(true);
         }
+        
     }
     public void GameOver()
     {
